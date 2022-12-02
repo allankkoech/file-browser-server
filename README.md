@@ -4,9 +4,11 @@ File browser server running as a docker container exposed on port 8080. The imag
 # Building
 ```bash
 echo FILE_DIR=./ > .env
-```
 docker-compose up -d
+```
 
 # Testing
-http://localhost:8080/
+Visit your browser at [http://localhost:8080/](http://localhost:8080/)
 
+# Deploy
+Reverse proxy from port 80 to http://localhost:8080/
