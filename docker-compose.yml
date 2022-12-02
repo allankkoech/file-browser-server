@@ -1,0 +1,13 @@
+version: '3.3'
+
+services:
+  apache:
+    ports:
+      - "8080:80"
+    build:
+      context: .
+      dockerfile: Dockerfile
+    restart: always
+    container_name: apache-server
+    volumes:
+      - ${FILE_DIR}:/usr/local/apache2/htdocs
